@@ -13,18 +13,21 @@ def password(length, num=False, strength='weak'):
     pwd = ''
     length -= 2
     if strength == 'weak':
+        print('Weak Password.')
         if num:
             for i in range(2):
                  pwd += random.choice(dig)
         for i in range(length):
             pwd += random.choice(lower)
     elif strength == 'strong':
+        print('Strong Password.')
         if num:
             for i in range(2):
                 pwd += random.choice(dig)
         for i in range(length):
             pwd += random.choice(letter)
     elif strength == 'very':
+        print('Very Strong Password.')
         ran = random.randint(2, 4)
         length -= ran
         if num:
